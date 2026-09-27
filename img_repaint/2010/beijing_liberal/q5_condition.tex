@@ -1,0 +1,13 @@
+\begin{tikzpicture}[>=Stealth, scale=0.9, line cap=round, line join=round]
+  % Front view (正(主)视图)
+  \draw[thick] (0,0) rectangle (3.0,1.5);
+  \draw[thick] (0,0.75) -- (1.5,0.75) -- (1.5,1.5);
+  \node[font=\small] at (1.5,-0.5) {正 (主) 视图};
+
+  % Side view (侧(左)视图)
+  \begin{scope}[xshift=4.2cm]
+    \draw[thick] (0,0) rectangle (1.5,1.5);
+    \draw[thick] (0.75,1.5) -- (0.75,0.75) -- (1.5,0.75);
+    \node[font=\small] at (0.75,-0.5) {侧 (左) 视图};
+  \end{scope}
+\end{tikzpicture}

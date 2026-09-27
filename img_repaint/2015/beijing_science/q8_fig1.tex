@@ -1,0 +1,65 @@
+\begin{tikzpicture}[>=Stealth, scale=0.95, line cap=round, line join=round]
+  % Axes
+  \draw[thick, ->] (0,0) -- (8.6,0) node[below=4pt, font=\normalsize] {速度 (km/h)};
+  \draw[thick, ->] (0,0) -- (0,6.2) node[above right=-3pt, font=\normalsize] {燃油效率 (km/L)};
+  \node[below left=2pt, font=\normalsize] at (0,0) {$0$};
+
+  % X-ticks
+  \draw (2.4,0) -- (2.4,0.15) node[below=8pt, font=\normalsize] {$40$};
+  \draw (4.8,0) -- (4.8,0.15) node[below=8pt, font=\normalsize] {$80$};
+  \draw (7.2,0) -- (7.2,0.15);
+
+  % Y-ticks
+  \draw (0,1.8) -- (0.15,1.8) node[left=6pt, font=\normalsize] {$5$};
+  \draw (0,3.6) -- (0.15,3.6) node[left=6pt, font=\normalsize] {$10$};
+  \draw (0,5.4) -- (0.15,5.4) node[left=6pt, font=\normalsize] {$15$};
+
+  % Data points and curves
+  % Marker helper commands
+  \def\drawcirc#1{\fill #1 circle (1.5pt);}
+  \def\drawtri#1{\fill #1 ++(0,2.0pt) -- ++(-1.8pt,-3.0pt) -- ++(3.6pt,0) -- cycle;}
+  \def\drawsq#1{\fill #1 +(-1.4pt,-1.4pt) rectangle +(1.4pt,1.4pt);}
+
+  % 1. 甲车: dashed line, circular dots
+  \draw[dashed, semithick]
+    (0.90, 1.80) -- (1.38, 3.24) -- (2.04, 4.50) -- (2.40, 5.40) --
+    (3.36, 4.68) -- (4.38, 3.60) -- (4.98, 4.32) -- (5.58, 4.14) --
+    (6.18, 4.68) -- (7.50, 3.60);
+
+  \foreach \p in {(0.90, 1.80), (1.38, 3.24), (2.04, 4.50), (2.40, 5.40),
+                 (3.36, 4.68), (4.38, 3.60), (4.98, 4.32), (5.58, 4.14),
+                 (6.18, 4.68), (7.50, 3.60)} {
+    \drawcirc{\p}
+  }
+  \node[right=3pt, font=\normalsize] at (7.50, 3.60) {甲车};
+
+  % 2. 乙车: dotted line, triangular markers
+  \draw[loosely dotted, thick]
+    (0.84, 0.65) -- (1.14, 0.79) -- (1.56, 1.15) -- (1.98, 1.30) --
+    (2.40, 1.62) -- (2.88, 1.80) -- (3.36, 1.98) -- (3.84, 2.05) --
+    (4.38, 2.16) -- (4.80, 2.20) -- (5.28, 2.52) -- (5.58, 2.81) --
+    (6.18, 2.70) -- (7.08, 2.34) -- (7.50, 2.23);
+
+  \foreach \p in {(0.84, 0.65), (1.14, 0.79), (1.56, 1.15), (1.98, 1.30),
+                 (2.40, 1.62), (2.88, 1.80), (3.36, 1.98), (3.84, 2.05),
+                 (4.38, 2.16), (4.80, 2.20), (5.28, 2.52), (5.58, 2.81),
+                 (6.18, 2.70), (7.08, 2.34), (7.50, 2.23)} {
+    \drawtri{\p}
+  }
+  \node[right=3pt, font=\normalsize] at (7.50, 2.23) {乙车};
+
+  % 3. 丙车: solid line, square markers
+  \draw[semithick]
+    (0.84, 0.97) -- (1.14, 1.15) -- (1.56, 1.80) -- (1.98, 2.52) --
+    (2.40, 2.23) -- (2.88, 2.16) -- (3.36, 2.52) -- (3.84, 2.70) --
+    (4.38, 2.45) -- (4.80, 2.38) -- (5.28, 2.30) -- (6.18, 2.16) --
+    (7.08, 1.66) -- (7.50, 1.48);
+
+  \foreach \p in {(0.84, 0.97), (1.14, 1.15), (1.56, 1.80), (1.98, 2.52),
+                 (2.40, 2.23), (2.88, 2.16), (3.36, 2.52), (3.84, 2.70),
+                 (4.38, 2.45), (4.80, 2.38), (5.28, 2.30), (6.18, 2.16),
+                 (7.08, 1.66), (7.50, 1.48)} {
+    \drawsq{\p}
+  }
+  \node[right=3pt, font=\normalsize] at (7.50, 1.48) {丙车};
+\end{tikzpicture}

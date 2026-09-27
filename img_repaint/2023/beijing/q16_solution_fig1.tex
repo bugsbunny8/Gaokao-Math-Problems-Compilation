@@ -1,0 +1,25 @@
+% 2023年北京高考数学第16题解析图1：空间直角坐标系
+\begin{tikzpicture}[>=stealth,line width=0.6pt,font=\normalsize]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (2.5,-1.3);
+  \coordinate (C) at (4.8,0);
+  \coordinate (P) at (0,3.0);
+
+  % 坐标轴
+  \draw[->] (A) -- ($ (A)!1.25!(B) $) node[below] {$x$};
+  \draw[->,dashed] (A) -- (0.8,0.5) node[above left] {$y$};
+  \draw[->] (A) -- (0,3.7) node[left] {$z$};
+
+  % 实线边
+  \draw (P) -- (A) -- (B) -- (C) -- (P);
+  \draw (P) -- (B);
+
+  % 虚线底面边
+  \draw[dashed] (A) -- (C);
+
+  % 顶点标注
+  \node[left] at (P) {$P$};
+  \node[left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+\end{tikzpicture}

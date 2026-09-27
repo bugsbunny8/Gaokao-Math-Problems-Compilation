@@ -1,0 +1,29 @@
+\begin{tikzpicture}[baseline,line cap=round,line join=round,>=stealth,scale=1.1]
+  % Base vertices
+  \coordinate (A) at (-2.3,-0.8);
+  \coordinate (B) at (-0.4,-1.3);
+  \coordinate (C) at (2.2,-0.8);
+  \coordinate (D) at ($(A)+(C)-(B)$); % (0.3,-0.3)
+  \coordinate (E) at ($(A)!0.5!(D)$);
+  \coordinate (P) at ($(E)+(0,3.0)$);
+  \coordinate (F) at ($(P)!0.5!(B)$);
+
+  % Dashed lines (hidden)
+  \draw[dashed,line width=0.6pt] (A) -- (D) -- (C);
+  \draw[dashed,line width=0.6pt] (P) -- (D);
+  \draw[dashed,line width=0.6pt] (P) -- (E);
+  \draw[dashed,line width=0.6pt] (E) -- (F);
+
+  % Solid lines (visible)
+  \draw[line width=0.6pt] (P) -- (A) -- (B) -- (C) -- (P);
+  \draw[line width=0.6pt] (P) -- (B);
+
+  % Labels
+  \node[above] at (P) {$P$};
+  \node[left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above right] at ($(D)+(-0.05,-0.05)$) {$D$};
+  \node[above left] at ($(E)+(0.05,-0.05)$) {$E$};
+  \node[above left] at (F) {$F$};
+\end{tikzpicture}

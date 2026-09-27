@@ -1,0 +1,40 @@
+% 2022年北京高考数学第7题：二氧化碳相图 (T与lg P关系)
+\begin{tikzpicture}[>=stealth,line width=0.6pt,font=\normalsize]
+  % 边框与刻度
+  \draw (0,0) rectangle (5.0,4.0);
+  \draw[->] (0,0) -- (5.6,0) node[below] {$T$};
+  \draw[->] (0,0) -- (0,4.4) node[left] {$\lg P$};
+
+  % 横轴刻度与标签
+  \foreach \x/\label in {0/200, 1.25/250, 2.5/300, 3.75/350, 5.0/400} {
+    \draw (\x,0) -- (\x,-0.1) node[below] {\label};
+  }
+  % 纵轴刻度与标签
+  \foreach \y/\label in {0/0, 1/1, 2/2, 3/3, 4/4} {
+    \draw (0,\y) -- (-0.1,\y) node[left] {\label};
+  }
+
+  % 三相点与临界点
+  \coordinate (Triple) at (0.42,0.71);
+  \coordinate (Critical) at (2.6,1.76);
+  \coordinate (MeltEnd) at (2.6,3.74);
+
+  % 升华曲线 (气-固)
+  \draw plot[smooth,tension=0.6] coordinates {(0,0.28) (0.2,0.5) (Triple)};
+
+  % 汽化曲线 (气-液)
+  \draw plot[smooth,tension=0.6] coordinates {(Triple) (1.2,1.1) (2.0,1.45) (Critical)};
+
+  % 熔化曲线 (固-液)
+  \draw plot[smooth,tension=0.6] coordinates {(Triple) (0.6,2.2) (1.0,2.85) (1.8,3.4) (MeltEnd) (3.8,4.0)};
+
+  % 虚线 (临界区域边界)
+  \draw[dashed] (Critical) -- (MeltEnd);
+  \draw[dashed] (Critical) -- (5.0,1.76);
+
+  % 状态区域文字
+  \node at (0.7,3.6) {固态};
+  \node at (1.6,2.3) {液态};
+  \node at (2.8,0.8) {气态};
+  \node at (3.5,2.7) {超临界状态};
+\end{tikzpicture}

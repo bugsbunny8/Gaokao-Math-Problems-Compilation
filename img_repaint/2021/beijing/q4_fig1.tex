@@ -1,0 +1,21 @@
+% 2021年北京高考数学第4题：三视图
+\begin{tikzpicture}[>=stealth,line width=0.6pt,font=\normalsize]
+  % 正 (主) 视图: 等腰直角三角形，直角在左下
+  \draw (0,0) -- (2,0) -- (0,2) -- cycle;
+  \node at (1,-0.7) {正 (主) 视图};
+  \draw[|<->|] (-0.3,0) -- node[fill=white,inner sep=1pt] {$1$} (-0.3,2);
+  \draw[|<->|] (0,-0.3) -- node[fill=white,inner sep=1pt] {$1$} (2,-0.3);
+
+  % 侧 (左) 视图: 等腰直角三角形
+  \begin{scope}[xshift=3.5cm]
+    \draw (0,0) -- (2,0) -- (0,2) -- cycle;
+    \node at (1,-0.7) {侧 (左) 视图};
+    \draw[|<->|] (0,-0.3) -- node[fill=white,inner sep=1pt] {$1$} (2,-0.3);
+  \end{scope}
+
+  % 俯视图: 直角三角形，直角在左上
+  \begin{scope}[yshift=-3.2cm]
+    \draw (0,2) -- (2,2) -- (0,0) -- cycle;
+    \node at (1,-0.7) {俯视图};
+  \end{scope}
+\end{tikzpicture}

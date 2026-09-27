@@ -1,0 +1,48 @@
+\begin{tikzpicture}[>=latex, scale=1.1, line join=round, line cap=round]
+  % Coordinates
+  \coordinate (A) at (-2.0, -1.2);
+  \coordinate (B) at (1.6, -1.2);
+  \coordinate (C) at (2.8, 0);
+  \coordinate (D) at (-0.8, 0);
+
+  \coordinate (A1) at (-1.4, 1.4);
+  \coordinate (B1) at (1.25, 1.4);
+  \coordinate (C1) at (1.85, 2.0);
+  \coordinate (D1) at (-0.8, 2.0);
+
+  \coordinate (E) at (-0.8, 4.0);
+  \coordinate (F) at (0.9, 4.0);
+
+  % Dashed lines
+  \draw[dashed, thin] (A) -- (D) -- (C);
+  \draw[dashed, thin] (D) -- (D1);
+  \draw[dashed, thin] (A1) -- (E) -- (D1);
+  \draw[dashed, thin] (E) -- (F);
+  \draw[dashed, thin] (B1) -- (F) -- (C1);
+
+  % Solid lines
+  \draw[thick] (A) -- (B) -- (C) -- (C1) -- (D1) -- (A1) -- cycle;
+  \draw[thick] (A) -- (A1);
+  \draw[thick] (B) -- (B1) -- (C1);
+  \draw[thick] (A1) -- (B1);
+
+  % Dimension labels
+  \node[below] at (0, -1.2) {$a$};
+  \node[below right] at (2.3, -0.5) {$b$};
+  \node[below] at (-0.1, 1.4) {$c$};
+  \node[above left] at (1.8, 1.5) {$d$};
+
+  % Vertex labels
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[below right] at (D) {$D$};
+
+  \node[left] at (A1) {$A_1$};
+  \node[below left] at (B1) {$B_1$};
+  \node[above right] at (C1) {$C_1$};
+  \node[above right] at (D1) {$D_1$};
+
+  \node[above left] at (E) {$E$};
+  \node[above right] at (F) {$F$};
+\end{tikzpicture}

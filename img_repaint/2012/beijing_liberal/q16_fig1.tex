@@ -1,0 +1,55 @@
+\begin{tikzpicture}[>=Stealth, scale=0.9, line cap=round, line join=round]
+  % ================= 图 1 =================
+  \begin{scope}[xshift=0cm]
+    \coordinate (C) at (0, 0);
+    \coordinate (B) at (2.2, 0);
+    \coordinate (A) at (0, 4.4);
+    \coordinate (D) at (0, 2.0);
+    \coordinate (E) at (1.2, 2.0);
+    \coordinate (F) at (0, 0.9);
+
+    % Lines
+    \draw[thick] (C) -- (B) -- (A) -- cycle;
+    \draw[thick] (D) -- (E);
+    \fill (F) circle (1.4pt);
+
+    % Labels
+    \node[above] at (A) {$A$};
+    \node[left] at (D) {$D$};
+    \node[left] at (F) {$F$};
+    \node[below left=-1pt] at (C) {$C$};
+    \node[below right=-1pt] at (B) {$B$};
+    \node[above right=-1pt] at (E) {$E$};
+    \node[below=12pt] at (1.1, 0) {图 1};
+  \end{scope}
+
+  % ================= 图 2 =================
+  \begin{scope}[xshift=4.6cm]
+    \coordinate (C) at (0, 0);
+    \coordinate (B) at (2.3, 0);
+    \coordinate (D) at (0.5, 0.75);
+    \coordinate (E) at (1.8, 0.75);
+    \coordinate (A1) at (0.2, 2.5);
+    \coordinate (F) at ($(C)!0.45!(D)$);
+
+    % Dashed lines (hidden)
+    \draw[dashed, thick] (C) -- (D) -- (E);
+    \draw[dashed, thick] (A1) -- (D);
+    \draw[dashed, thick] (A1) -- (F);
+
+    % Solid lines (visible)
+    \draw[thick] (C) -- (B) -- (E);
+    \draw[thick] (A1) -- (C);
+    \draw[thick] (A1) -- (B);
+    \draw[thick] (A1) -- (E);
+
+    % Labels
+    \node[above] at (A1) {$A_1$};
+    \node[below left=-1pt] at (C) {$C$};
+    \node[below right=-1pt] at (B) {$B$};
+    \node[above right=-1pt] at (E) {$E$};
+    \node[above right=-2pt] at (D) {$D$};
+    \node[below right=-1pt] at (F) {$F$};
+    \node[below=12pt] at (1.15, 0) {图 2};
+  \end{scope}
+\end{tikzpicture}

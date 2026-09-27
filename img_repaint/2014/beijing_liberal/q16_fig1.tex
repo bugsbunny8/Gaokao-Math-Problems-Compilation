@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth, scale=1.0, line cap=round, line join=round]
+  % Parameters
+  \def\xzero{3.665}
+  \def\yzero{2.2}
+
+  % Axes
+  \draw[thick, ->] (-0.7,0) -- (5.2,0) node[below] {$x$};
+  \draw[thick, ->] (0,-2.8) -- (0,2.8) node[left] {$y$};
+  \node[below left] at (0,0) {$O$};
+
+  % Trigonometric curve f(x) = 3*sin(2x + pi/6)
+  \draw[thick, smooth, domain=-0.35:4.4, samples=120]
+    plot (\x, {\yzero * sin(2 * \x * 180 / 3.14159265 + 30)});
+
+  % Dashed projection lines for (x0, y0)
+  \draw[dashed] (0,\yzero) -- (\xzero,\yzero);
+  \draw[dashed] (\xzero,0) -- (\xzero,\yzero);
+
+  % Ticks & Labels
+  \node[left] at (0,\yzero) {$y_0$};
+  \node[below] at (\xzero,0) {$x_0$};
+\end{tikzpicture}

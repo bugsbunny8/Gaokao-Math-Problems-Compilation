@@ -1,0 +1,35 @@
+\begin{tikzpicture}[>=Stealth, scale=1.1, line cap=round, line join=round]
+  % Coordinates
+  \coordinate (A) at (0, 0);
+  \coordinate (B) at (2.2, -0.65);
+  \coordinate (C) at (3.8, 0);
+  \coordinate (A1) at (0, 3.2);
+  \coordinate (B1) at (2.2, 2.55);
+  \coordinate (C1) at (3.8, 3.2);
+  \coordinate (E) at (1.9, 3.2);
+  \coordinate (F) at (3.0, -0.325);
+
+  % Dashed lines (hidden)
+  \draw[dashed, thick] (A) -- (C);
+  \draw[dashed, thick] (A) -- (E);
+  \draw[dashed, thick] (B) -- (E);
+  \draw[dashed, thick] (C) -- (E);
+
+  % Solid lines (visible)
+  \draw[thick] (A) -- (B) -- (C);
+  \draw[thick] (A1) -- (B1) -- (C1) -- cycle;
+  \draw[thick] (A) -- (A1);
+  \draw[thick] (B) -- (B1);
+  \draw[thick] (C) -- (C1);
+  \draw[thick] (C1) -- (F);
+
+  % Labels
+  \node[above left=-2pt] at (A1) {$A_1$};
+  \node[above] at (E) {$E$};
+  \node[above right=-2pt] at (C1) {$C_1$};
+  \node[right] at (B1) {$B_1$};
+  \node[left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[below right=-2pt] at (F) {$F$};
+  \node[right] at (C) {$C$};
+\end{tikzpicture}

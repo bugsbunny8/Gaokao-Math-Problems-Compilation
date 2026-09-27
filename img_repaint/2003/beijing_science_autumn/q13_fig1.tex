@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=stealth, scale=1.0, line cap=round, line join=round]
+  % Bottom ellipse
+  \draw[dashed] (1.6, 0) arc[start angle=0, end angle=180, x radius=1.6, y radius=0.45];
+  \draw[thick] (-1.6, 0) arc[start angle=180, end angle=360, x radius=1.6, y radius=0.45];
+  \draw[dashed] (-1.6, 0) -- (1.6, 0) node[midway, below=2pt] {$2r$};
+
+  % Generators
+  \draw[thick] (-1.6, 0) -- (-1.6, 2.4);
+  \draw[thick] (1.6, 0) -- (1.6, 4.8);
+
+  % Top tilted ellipse
+  \draw[very thick, rotate around={36.87:(0, 3.6)}] (0, 3.6) ellipse (2.0cm and 0.48cm);
+
+  % Labels
+  \node[left=2pt] at (-1.6, 1.2) {$b$};
+  \node[right=2pt] at (1.6, 2.4) {$a$};
+\end{tikzpicture}

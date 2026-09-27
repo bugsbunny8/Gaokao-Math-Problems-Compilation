@@ -1,0 +1,80 @@
+\begin{tikzpicture}[>=Stealth, scale=0.9, line cap=round, line join=round]
+  % Common styles
+  \tikzset{
+    dot/.style={circle, fill=black, inner sep=1.2pt},
+    axlabel/.style={font=\small},
+    vlabel/.style={font=\small, align=center}
+  }
+
+  % ================= Left Plot: 语文成绩 =================
+  \begin{scope}[xshift=0cm]
+    % Axes & Frame
+    \draw[thick, ->] (0,0) -- (5.2,0);
+    \draw[thick, ->] (0,0) -- (0,5.2);
+    \draw (0,4.5) -- (4.5,4.5) -- (4.5,0);
+
+    % Ticks & Labels
+    \node[below left] at (0,0) {$O$};
+    \node[below] at (4.5,0) {$267$};
+    \node[left] at (0,4.5) {$267$};
+    \node[axlabel, below] at (2.25,-0.2) {总成绩年级名次};
+    \node[vlabel, left] at (-0.1,2.25) {语\\文\\成\\绩\\年\\级\\名\\次};
+
+    % 37 Data Points (Total Rank, Chinese Rank) mapped to [0, 4.5]
+    % Points matching original layout
+    \coordinate (Jia) at (0.75, 1.35);
+    \coordinate (Yi) at (2.1, 1.15);
+
+    \foreach \pt in {
+      (0.08, 0.2), (0.12, 0.1), (0.18, 0.4), (0.15, 2.0), (0.22, 3.8),
+      (0.35, 0.65), (0.45, 0.5), (0.42, 2.6), (0.45, 3.0), (0.55, 1.9),
+      (0.62, 2.15), (0.6, 4.1), (0.7, 2.4), (0.85, 1.25), (0.9, 1.45),
+      (0.95, 1.55), (1.05, 3.9), (1.2, 0.4), (1.3, 2.3), (1.5, 3.1),
+      (1.7, 1.8), (1.75, 2.0), (1.8, 3.6), (1.8, 2.8), (2.0, 1.95),
+      (2.4, 0.6), (2.45, 2.45), (2.8, 1.0), (2.9, 0.15), (2.95, 4.0),
+      (3.2, 3.85), (3.35, 2.5), (3.8, 1.1)
+    } {
+      \node[dot] at \pt {};
+    }
+
+    % 甲 and 乙
+    \node[dot] at (Jia) {};
+    \node[right=2pt] at (Jia) {甲};
+    \node[dot] at (Yi) {};
+    \node[right=2pt] at (Yi) {乙};
+  \end{scope}
+
+  % ================= Right Plot: 数学成绩 =================
+  \begin{scope}[xshift=7.0cm]
+    % Axes & Frame
+    \draw[thick, ->] (0,0) -- (5.2,0);
+    \draw[thick, ->] (0,0) -- (0,5.2);
+    \draw (0,4.5) -- (4.5,4.5) -- (4.5,0);
+
+    % Ticks & Labels
+    \node[below left] at (0,0) {$O$};
+    \node[below] at (4.5,0) {$267$};
+    \node[left] at (0,4.5) {$267$};
+    \node[axlabel, below] at (2.25,-0.2) {总成绩年级名次};
+    \node[vlabel, left] at (-0.1,2.25) {数\\学\\成\\绩\\年\\级\\名\\次};
+
+    % 37 Data Points (Total Rank, Math Rank)
+    \coordinate (Bing) at (3.0, 3.0);
+
+    \foreach \pt in {
+      (0.08, 0.15), (0.12, 0.25), (0.15, 0.7), (0.2, 0.4), (0.22, 0.9),
+      (0.35, 0.8), (0.35, 1.4), (0.42, 0.6), (0.45, 0.9), (0.55, 0.2),
+      (0.65, 0.8), (0.7, 1.0), (0.8, 0.9), (0.9, 1.1), (0.95, 2.4),
+      (1.05, 0.8), (1.18, 2.05), (1.2, 2.2), (1.22, 1.8), (1.25, 1.7),
+      (1.35, 2.1), (1.35, 3.3), (1.5, 0.8), (1.75, 2.9), (2.15, 0.2),
+      (2.3, 3.5), (2.35, 3.75), (2.4, 4.05), (2.8, 4.7), (2.85, 3.9),
+      (3.15, 4.15), (3.25, 3.7), (3.4, 4.3), (3.05, 0.35)
+    } {
+      \node[dot] at \pt {};
+    }
+
+    % 丙
+    \node[dot] at (Bing) {};
+    \node[right=2pt] at (Bing) {丙};
+  \end{scope}
+\end{tikzpicture}

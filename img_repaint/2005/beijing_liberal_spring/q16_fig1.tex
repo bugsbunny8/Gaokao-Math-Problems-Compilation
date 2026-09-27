@@ -1,0 +1,24 @@
+\begin{tikzpicture}[>=stealth, scale=1.1, line cap=round, line join=round]
+  % Coordinates
+  \coordinate (A) at (-3.0, 0);
+  \coordinate (B) at (1.0, -1.2);
+  \coordinate (C) at (3.2, 1.2);
+  \coordinate (M) at (2.1, 0);
+  \coordinate (S) at (0.3, 2.5);
+
+  % Dashed lines
+  \draw[dashed] (A) -- (C);
+  \draw[dashed] (A) -- (M);
+
+  % Solid lines
+  \draw (S) -- (A) -- (B) -- (C) -- (S);
+  \draw (S) -- (B);
+  \draw (S) -- (M);
+
+  % Labels
+  \node[above] at (S) {$S$};
+  \node[left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[below right=-1pt] at (M) {$M$};
+\end{tikzpicture}

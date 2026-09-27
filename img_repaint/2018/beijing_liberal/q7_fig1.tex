@@ -1,0 +1,27 @@
+\begin{tikzpicture}[baseline,line cap=round,line join=round,>=stealth,scale=1.1]
+  \def\R{1.6}
+
+  % Axes
+  \draw[->,line width=0.5pt] (-2.2,0) -- (2.2,0) node[below] {$x$};
+  \draw[->,line width=0.5pt] (0,-2.2) -- (0,2.2) node[left] {$y$};
+  \node[below left] at (-0.05,-0.05) {$O$};
+
+  % Dashed base circle
+  \draw[dashed,line width=0.5pt] (0,0) circle (\R);
+
+  % Four solid arcs: AB, CD, EF, GH
+  \draw[line width=0.8pt] (0:\R) arc (0:35:\R);
+  \draw[line width=0.8pt] (55:\R) arc (55:85:\R);
+  \draw[line width=0.8pt] (105:\R) arc (105:135:\R);
+  \draw[line width=0.8pt] (180:\R) arc (180:225:\R);
+
+  % Labels
+  \node[above right] at (0:\R) {$A$};
+  \node[above right] at (35:\R) {$B$};
+  \node[above right] at (55:\R) {$C$};
+  \node[above right] at (85:\R) {$D$};
+  \node[above left] at (105:\R) {$E$};
+  \node[above left] at (135:\R) {$F$};
+  \node[below left] at (180:\R) {$G$};
+  \node[below left] at (225:\R) {$H$};
+\end{tikzpicture}

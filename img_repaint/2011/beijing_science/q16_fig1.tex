@@ -1,0 +1,25 @@
+\begin{tikzpicture}[>=Stealth, scale=1.1, line cap=round, line join=round]
+  % Coordinates
+  \coordinate (A) at (0, 0);
+  \coordinate (P) at (0, 3.6);
+  \coordinate (B) at (1.2, -0.6);
+  \coordinate (C) at (3.8, 0);
+  \coordinate (D) at (2.6, 0.6);
+
+  % Dashed lines (hidden)
+  \draw[dashed, thick] (A) -- (D) -- (C);
+  \draw[dashed, thick] (P) -- (D);
+  \draw[dashed, thick] (B) -- (D);
+  \draw[dashed, thick] (A) -- (C);
+
+  % Solid lines (visible)
+  \draw[thick] (P) -- (A) -- (B) -- (C) -- (P);
+  \draw[thick] (P) -- (B);
+
+  % Labels
+  \node[above] at (P) {$P$};
+  \node[below left=-2pt] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[below right=-2pt] at (C) {$C$};
+  \node[above right=-2pt] at (D) {$D$};
+\end{tikzpicture}

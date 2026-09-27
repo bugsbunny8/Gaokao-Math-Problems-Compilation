@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=stealth, scale=1.1, line cap=round, line join=round]
+  % Coordinates
+  \coordinate (A) at (0, 0);
+  \coordinate (P) at (0, 3.6);
+  \coordinate (C) at (2.2, -0.9);
+  \coordinate (B) at (3.9, 0);
+
+  % Midpoint E on PC, D on PB
+  \coordinate (D) at (1.95, 1.8);
+  \coordinate (E) at (1.1, 1.35);
+
+  % Dashed lines
+  \draw[dashed] (A) -- (B);
+  \draw[dashed] (A) -- (D);
+
+  % Solid lines
+  \draw (P) -- (A) -- (C) -- (B) -- (P) -- (C);
+  \draw (A) -- (E) -- (D);
+
+  % Labels
+  \node[above] at (P) {$P$};
+  \node[below left=-1pt] at (A) {$A$};
+  \node[below] at (C) {$C$};
+  \node[below right=-1pt] at (B) {$B$};
+  \node[left] at (E) {$E$};
+  \node[above right=-1pt] at (D) {$D$};
+\end{tikzpicture}

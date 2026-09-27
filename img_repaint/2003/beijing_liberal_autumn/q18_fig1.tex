@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=latex, scale=1.1, line join=round, line cap=round]
+  % Axes
+  \draw[->] (-3.8, 0) -- (3.8, 0) node[below] {$x$};
+  \draw[->] (0, -1.6) -- (0, 2.0) node[left] {$y$};
+  \node[below left] at (0, 0) {$O$};
+
+  % Ellipse
+  \draw[thick] (0, 0) ellipse (2.5 and 1.3);
+
+  % Ticks for foci
+  \draw (-2.0, 0) -- (-2.0, 0.08);
+  \draw (2.0, 0) -- (2.0, 0.08);
+
+  % Labels
+  \node[below left] at (-2.5, 0) {$A_1(-5,0)$};
+  \node[below right] at (2.5, 0) {$A(5,0)$};
+  \node[below] at (-2.0, -0.05) {$F_1(-4,0)$};
+  \node[below] at (2.0, -0.05) {$F_2(4,0)$};
+  \node[above right] at (0, 1.3) {$B$};
+  \node[below right] at (0, -1.3) {$B_1$};
+\end{tikzpicture}

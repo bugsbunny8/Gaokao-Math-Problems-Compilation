@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth, scale=0.9, line cap=round, line join=round]
+  % Coordinates
+  \coordinate (A) at (0, 0);
+  \coordinate (B) at (5.0, 0);
+  \coordinate (C) at (3.2, 2.4);
+  \coordinate (D) at (3.2, 0);
+  \coordinate (O) at (4.1, 0);
+  \coordinate (E) at (4.352, 0.864);
+
+  % Triangle and altitude
+  \draw[thick] (A) -- (B) -- (C) -- cycle;
+  \draw[thick] (C) -- (D);
+
+  % Circle on BD
+  \draw[thick] (O) circle (0.9);
+
+  % Labels
+  \node[below left=-1pt] at (A) {$A$};
+  \node[below left=-2pt] at (D) {$D$};
+  \node[below right=-1pt] at (B) {$B$};
+  \node[above] at (C) {$C$};
+  \node[above right=-1pt] at (E) {$E$};
+\end{tikzpicture}

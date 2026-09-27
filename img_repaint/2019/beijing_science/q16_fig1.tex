@@ -1,0 +1,35 @@
+\begin{tikzpicture}[baseline,line cap=round,line join=round,>=stealth,scale=1.1]
+  % Coordinates
+  \coordinate (A) at (0,0);
+  \coordinate (D) at (2.8,0);
+  \coordinate (B) at (-2.3,-1.2);
+  \coordinate (C) at ($(B)+1.5*(D)-1.5*(A)$);
+  \coordinate (P) at (0,3.3);
+
+  \coordinate (E) at ($(P)!0.5!(D)$);
+  \coordinate (F) at ($(P)!0.333!(C)$);
+  \coordinate (G) at ($(P)!0.667!(B)$);
+
+  % Dashed lines
+  \draw[dashed,line width=0.6pt] (P) -- (A);
+  \draw[dashed,line width=0.6pt] (A) -- (B);
+  \draw[dashed,line width=0.6pt] (A) -- (D);
+  \draw[dashed,line width=0.6pt] (A) -- (E);
+  \draw[dashed,line width=0.6pt] (A) -- (F);
+  \draw[dashed,line width=0.6pt] (A) -- (G);
+
+  % Solid lines
+  \draw[line width=0.6pt] (P) -- (B) -- (C) -- (D) -- (P);
+  \draw[line width=0.6pt] (P) -- (C);
+  \draw[line width=0.6pt] (E) -- (F);
+
+  % Labels
+  \node[above] at (P) {$P$};
+  \node[below] at ($(A)+(0,-0.05)$) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[above right] at (E) {$E$};
+  \node[left] at ($(F)+(-0.05,0.05)$) {$F$};
+  \node[left] at (G) {$G$};
+\end{tikzpicture}

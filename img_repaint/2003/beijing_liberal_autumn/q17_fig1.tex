@@ -1,0 +1,33 @@
+\begin{tikzpicture}[>=latex, scale=1.1, line join=round, line cap=round]
+  % Coordinates
+  \coordinate (C) at (-1.8, 0);
+  \coordinate (B) at (1.6, 0);
+  \coordinate (A) at (0.8, -1.2);
+  \coordinate (D) at (-0.1, 0);
+
+  \coordinate (C1) at (-1.8, 3.8);
+  \coordinate (B1) at (1.6, 3.8);
+  \coordinate (A1) at (0.8, 2.6);
+
+  % Dashed lines
+  \draw[dashed, thin] (C) -- (B);
+  \draw[dashed, thin] (A) -- (D);
+  \draw[dashed, thin] (C1) -- (D);
+  \draw[dashed, thin] (A1) -- (D);
+
+  % Solid lines
+  \draw[thick] (C1) -- (B1) -- (B) -- (A) -- (C) -- cycle;
+  \draw[thick] (A) -- (A1);
+  \draw[thick] (A1) -- (B1);
+  \draw[thick] (A1) -- (C1);
+  \draw[thick] (C1) -- (A);
+
+  % Labels
+  \node[above left] at (C1) {$C_1$};
+  \node[above right] at (B1) {$B_1$};
+  \node[right] at (A1) {$A_1$};
+  \node[below left] at (C) {$C$};
+  \node[below right] at (B) {$B$};
+  \node[below right] at (A) {$A$};
+  \node[below left] at (D) {$D$};
+\end{tikzpicture}

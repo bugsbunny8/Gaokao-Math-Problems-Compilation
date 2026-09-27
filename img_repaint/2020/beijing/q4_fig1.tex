@@ -1,0 +1,25 @@
+% 2020年北京高考数学第4题：正三棱柱三视图
+\begin{tikzpicture}[>=stealth,line width=0.6pt,font=\normalsize]
+  % 正 (主) 视图: 宽 2, 高 2 的矩形，中线虚线
+  \draw (-1,2) rectangle (1,4);
+  \draw[dashed] (0,2) -- (0,4);
+  \node at (0,1.3) {正 (主) 视图};
+
+  % 尺寸标注: 高度 2
+  \draw[|<->|] (-1.4,2) -- node[fill=white,inner sep=1pt] {$2$} (-1.4,4);
+  % 尺寸标注: 宽度 1, 1
+  \draw[|<->|] (-1,1.75) -- node[fill=white,inner sep=1pt] {$1$} (0,1.75);
+  \draw[|<->|] (0,1.75) -- node[fill=white,inner sep=1pt] {$1$} (1,1.75);
+
+  % 侧 (左) 视图: 宽 sqrt(3) ≈ 1.732, 高 2 的矩形
+  \begin{scope}[xshift=3.0cm]
+    \draw (-0.866,2) rectangle (0.866,4);
+    \node at (0,1.3) {侧 (左) 视图};
+  \end{scope}
+
+  % 俯视图: 正三角形（底边在下，顶点在上），底长 2，高 sqrt(3)
+  \begin{scope}[yshift=-1.8cm]
+    \draw (-1,0) -- (1,0) -- (0,1.732) -- cycle;
+    \node at (0,-0.6) {俯视图};
+  \end{scope}
+\end{tikzpicture}

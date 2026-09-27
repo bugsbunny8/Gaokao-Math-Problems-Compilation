@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth, scale=1.0, line cap=round, line join=round]
+  % Coordinates
+  \coordinate (B) at (0, 0);
+  \coordinate (C) at (2.8, 0);
+  \coordinate (D) at (1.7, 0);
+  \coordinate (A) at (2.2, 4.0);
+
+  % Triangle and segment AD
+  \draw[thick] (B) -- (C) -- (A) -- cycle;
+  \draw[thick] (A) -- (D);
+
+  % Labels
+  \node[above] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below] at (D) {$D$};
+  \node[below right] at (C) {$C$};
+\end{tikzpicture}

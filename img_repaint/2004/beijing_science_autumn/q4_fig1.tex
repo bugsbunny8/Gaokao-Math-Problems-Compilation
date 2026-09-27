@@ -1,0 +1,39 @@
+\begin{tikzpicture}[>=stealth, scale=1.1, line cap=round, line join=round]
+  % Vertices
+  \coordinate (A) at (0, 0);
+  \coordinate (B) at (2.4, 0);
+  \coordinate (B1) at (2.4, 2.4);
+  \coordinate (A1) at (0, 2.4);
+
+  \coordinate (D) at (0.9, 0.9);
+  \coordinate (C) at (3.3, 0.9);
+  \coordinate (C1) at (3.3, 3.3);
+  \coordinate (D1) at (0.9, 3.3);
+
+  % Point P on face BCC1B1
+  \coordinate (P) at (3.0, 1.8);
+
+  % Dashed lines
+  \draw[dashed] (D) -- (D1);
+  \draw[dashed] (D) -- (A);
+  \draw[dashed] (D) -- (C);
+
+  % Solid lines
+  \draw (A) -- (B) -- (B1) -- (A1) -- cycle;
+  \draw (A1) -- (D1) -- (C1) -- (B1);
+  \draw (B1) -- (C1) -- (C) -- (B);
+
+  % Dot P
+  \fill (P) circle (1.5pt);
+
+  % Labels
+  \node[below left=-1pt] at (A) {$A$};
+  \node[below right=-1pt] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[left] at (A1) {$A_1$};
+  \node[right] at (B1) {$B_1$};
+  \node[above right=-1pt] at (C1) {$C_1$};
+  \node[above left=-1pt] at (D1) {$D_1$};
+  \node[left=2pt] at (P) {$P$};
+\end{tikzpicture}

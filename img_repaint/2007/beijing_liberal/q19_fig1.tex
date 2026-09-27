@@ -1,0 +1,35 @@
+\begin{tikzpicture}[>=stealth, scale=0.9, line cap=round, line join=round]
+  % Axes
+  \draw[->] (-3.2, 0) -- (6.0, 0) node[below=1pt] {$x$};
+  \draw[->] (0, -3.2) -- (0, 3.5) node[left=1pt] {$y$};
+  \node[below right=-1pt] at (0, 0) {$O$};
+
+  % Key points
+  \coordinate (A) at (0, -2);
+  \coordinate (D) at (-0.8, 0.4);
+  \coordinate (C) at (4.0, 2.0);
+  \coordinate (B) at (4.8, -0.4);
+  \coordinate (M) at (2, 0);
+  \coordinate (N) at (-2, 0);
+  \coordinate (T) at (-1, 1);
+
+  % Rectangle ABCD
+  \draw (A) -- (B) -- (C) -- (D) -- cycle;
+
+  % Extended line through AD and T
+  \draw (-1.4, 2.2) -- (0.3, -2.9);
+
+  % Dots on points
+  \fill (M) circle (1.5pt);
+  \fill (N) circle (1.5pt);
+  \fill (T) circle (1.5pt);
+
+  % Labels
+  \node[above=2pt] at (M) {$M$};
+  \node[above=2pt] at (N) {$N$};
+  \node[left=1pt] at (T) {$T$};
+  \node[left=1pt] at (D) {$D$};
+  \node[left=1pt] at (A) {$A$};
+  \node[right=1pt] at (B) {$B$};
+  \node[above=1pt] at (C) {$C$};
+\end{tikzpicture}
