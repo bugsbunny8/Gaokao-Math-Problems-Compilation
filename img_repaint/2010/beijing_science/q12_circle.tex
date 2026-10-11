@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>=Stealth, scale=1.1, line cap=round, line join=round]
+  % Center and Radius
+  \coordinate (O) at (0, 0);
+  \def\R{1.5}
+
+  % Points
+  \coordinate (E) at (-1.33, 0.69);
+  \coordinate (D) at (1.33, 0.69);
+  \coordinate (A) at (2.8, 0.69);
+  \coordinate (C) at (0.45, -1.43);
+  \coordinate (B) at (1.36, -0.63);
+
+  % Circle
+  \draw[thick] (O) circle (\R);
+
+  % Lines
+  \draw[thick] (E) -- (A) -- (C) -- (E);
+  \draw[thick] (D) -- (B);
+
+  % Center dot
+  \fill (O) circle (1.3pt);
+
+  % Labels
+  \node[above right=-1pt] at (O) {$O$};
+  \node[above left=-2pt] at (E) {$E$};
+  \node[above] at (D) {$D$};
+  \node[right] at (A) {$A$};
+  \node[below right=-2pt] at (B) {$B$};
+  \node[below] at (C) {$C$};
+\end{tikzpicture}

@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=stealth, scale=0.9, line cap=round, line join=round]
+  % Shaded regions
+  \fill[gray!20] (0, 0) -- (2.4, 2.4) -- (2.4, -2.4) -- cycle;
+  \fill[gray!20] (0, 0) -- (-2.4, 2.4) -- (-2.4, -2.4) -- cycle;
+
+  % Axes
+  \draw[->] (-3.2, 0) -- (3.2, 0) node[below=1pt] {$x$};
+  \draw[->] (0, -2.8) -- (0, 2.8) node[left=1pt] {$y$};
+  \node[below left=-1pt] at (0, 0) {$O$};
+
+  % Dashed lines l1 and l2
+  \draw[dashed] (-2.4, -2.4) -- (2.4, 2.4) node[above=1pt] {$l_1$};
+  \draw[dashed] (-2.4, 2.4) -- (2.4, -2.4) node[below=1pt] {$l_2$};
+
+  % Labels
+  \node at (-1.6, -0.3) {$W_1$};
+  \node at (1.6, -0.3) {$W_2$};
+\end{tikzpicture}

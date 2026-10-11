@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=stealth, scale=1.0, line cap=round, line join=round]
+  % Axes
+  \draw[->] (-3.0, 0) -- (3.0, 0) node[below=1pt] {$x$};
+  \draw[->] (0, -2.6) -- (0, 2.6) node[left=1pt] {$y$};
+  \node[above right=1pt] at (0, 0) {$O$};
+
+  % Outer ellipse (orbit)
+  \draw[thick] (0, 0) ellipse (2.3cm and 2.1cm);
+
+  % Inner circle (Earth), centered at F2 = (0.65, 0) with radius 1.45
+  \draw[thick] (0.65, 0) circle (1.45cm);
+
+  % Foci tick marks
+  \draw (-0.65, 0.08) -- (-0.65, 0);
+  \draw (0.65, 0.08) -- (0.65, 0);
+
+  % Labels
+  \node[below=2pt] at (-0.65, 0) {$F_1$};
+  \node[below=2pt] at (0.65, 0) {$F_2$};
+  \node[below left=-1pt] at (-2.3, 0) {$B$};
+  \node[below right=-1pt] at (2.3, 0) {$A$};
+\end{tikzpicture}

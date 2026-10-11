@@ -1,0 +1,19 @@
+\begin{tikzpicture}[scale=1.0, line cap=round, line join=round]
+  % Inner square coordinates
+  \coordinate (S1) at (1.1, 1.1);
+  \coordinate (S2) at (-1.1, 1.1);
+  \coordinate (S3) at (-1.1, -1.1);
+  \coordinate (S4) at (1.1, -1.1);
+
+  % Outer apex coordinates
+  \coordinate (T) at (0, 1.7);
+  \coordinate (B) at (0, -1.7);
+  \coordinate (R) at (1.7, 0);
+  \coordinate (L) at (-1.7, 0);
+
+  % Dashed square
+  \draw[dashed, thick] (S1) -- (S2) -- (S3) -- (S4) -- cycle;
+
+  % Solid outer octagon
+  \draw[thick] (R) -- (S1) -- (T) -- (S2) -- (L) -- (S3) -- (B) -- (S4) -- cycle;
+\end{tikzpicture}

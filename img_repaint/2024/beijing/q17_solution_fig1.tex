@@ -1,0 +1,40 @@
+% 2024年北京高考数学第17题解析图1：空间直角坐标系
+\begin{tikzpicture}[>=stealth,line width=0.6pt,font=\normalsize]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (0.6,-0.6);
+  \coordinate (C) at (2.4,-0.6);
+  \coordinate (D) at (5.2,0);
+  \coordinate (P) at (1.7,3.5);
+  \coordinate (E) at (1.7,0);
+  \coordinate (F) at (1.7,1.8);
+  \coordinate (S) at (3.5,1.75);
+
+  % 坐标轴 (以E为原点)
+  \draw[->] (E) -- ($ (E)!1.3!(C) $) node[below right] {$x$};
+  \draw[->] (E) -- ($ (E)!1.2!(D) $) node[below] {$y$};
+  \draw[->] (E) -- (1.7,4.2) node[left] {$z$};
+
+  % 实线可见边
+  \draw (A) -- (B) -- (C) -- (D);
+  \draw (P) -- (A);
+  \draw (P) -- (B);
+  \draw (P) -- (C);
+  \draw (P) -- (D);
+  \draw (C) -- (S);
+
+  % 虚线不可见底边与内部线
+  \draw[dashed] (A) -- (D);
+  \draw[dashed] (P) -- (E);
+  \draw[dashed] (B) -- (F);
+  \draw[dashed] (F) -- (S);
+
+  % 顶点标注
+  \node[left] at (P) {$P$};
+  \node[left] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[below left] at (E) {$E$};
+  \node[above right] at (F) {$F$};
+  \node[right] at (S) {$S$};
+\end{tikzpicture}

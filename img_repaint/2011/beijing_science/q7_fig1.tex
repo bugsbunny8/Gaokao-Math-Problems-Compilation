@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth, scale=0.9, line cap=round, line join=round]
+  \tikzset{dimlabel/.style={font=\small, fill=white, inner sep=1pt}}
+
+  % Front view (正(主)视图)
+  \draw[thick] (0,0) -- (2.2,0) -- (0,2.2) -- cycle;
+  \draw[|<->|] (-0.3,0) -- (-0.3,2.2) node[dimlabel, midway] {$4$};
+  \draw[|<->|] (0,-0.3) -- (2.2,-0.3) node[dimlabel, midway] {$4$};
+  \node[font=\small] at (1.1,-0.8) {正 (主) 视图};
+
+  % Side view (侧(左)视图)
+  \begin{scope}[xshift=3.4cm]
+    \draw[thick] (0,0) -- (1.65,0) -- (1.65,2.2) -- cycle;
+    \draw[|<->|] (0,-0.3) -- (1.65,-0.3) node[dimlabel, midway] {$3$};
+    \node[font=\small] at (0.825,-0.8) {侧 (左) 视图};
+  \end{scope}
+
+  % Top view (俯视图)
+  \begin{scope}[yshift=-1.2cm]
+    \draw[thick] (0,-2.2) -- (2.2,-2.2) -- (2.2,-0.6) -- cycle;
+    \node[font=\small] at (1.1,-2.6) {俯视图};
+  \end{scope}
+\end{tikzpicture}

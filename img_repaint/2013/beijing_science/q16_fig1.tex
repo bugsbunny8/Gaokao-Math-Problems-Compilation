@@ -1,0 +1,61 @@
+\begin{tikzpicture}[>=Stealth, scale=0.9, line cap=round, line join=round]
+  % Axes
+  \draw[thick, ->] (0,0) -- (10.6,0) node[below=3pt, font=\small] {日期};
+  \draw[thick, ->] (0,0) -- (0,5.8) node[above right=-3pt, font=\small] {空气质量指数};
+  \node[left=2pt, font=\small] at (0,0) {$0$};
+
+  % Y-gridlines and ticks
+  \foreach \y/\val in {1.0/50, 2.0/100, 3.0/150, 4.0/200, 5.0/250} {
+    \draw[dashed] (0,\y) -- (10.2,\y);
+    \node[left=2pt, font=\small] at (0,\y) {$\val$};
+  }
+
+  % X-ticks
+  \foreach \x/\day in {
+    0.7/1日, 1.4/2日, 2.1/3日, 2.8/4日, 3.5/5日, 4.2/6日, 4.9/7日,
+    5.6/8日, 6.3/9日, 7.0/10日, 7.7/11日, 8.4/12日, 9.1/13日, 9.8/14日
+  } {
+    \draw (\x,0) -- (\x,0.12);
+    \node[below=3pt, font=\small] at (\x,0) {\day};
+  }
+
+  % Coordinates (day x, AQI value * 0.02)
+  \coordinate (P1)  at (0.7, 1.72);  % 86
+  \coordinate (P2)  at (1.4, 0.50);  % 25
+  \coordinate (P3)  at (2.1, 1.14);  % 57
+  \coordinate (P4)  at (2.8, 2.86);  % 143
+  \coordinate (P5)  at (3.5, 4.40);  % 220
+  \coordinate (P6)  at (4.2, 3.20);  % 160
+  \coordinate (P7)  at (4.9, 0.80);  % 40
+  \coordinate (P8)  at (5.6, 4.34);  % 217
+  \coordinate (P9)  at (6.3, 3.20);  % 160
+  \coordinate (P10) at (7.0, 2.42);  % 121
+  \coordinate (P11) at (7.7, 3.16);  % 158
+  \coordinate (P12) at (8.4, 1.72);  % 86
+  \coordinate (P13) at (9.1, 1.58);  % 79
+  \coordinate (P14) at (9.8, 0.74);  % 37
+
+  % Line plot
+  \draw[semithick] (P1) -- (P2) -- (P3) -- (P4) -- (P5) -- (P6) -- (P7)
+                -- (P8) -- (P9) -- (P10) -- (P11) -- (P12) -- (P13) -- (P14);
+
+  % Points and value labels
+  \foreach \p in {P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13,P14} {
+    \fill (\p) circle (1.4pt);
+  }
+
+  \node[right=2pt, font=\small] at (P1)  {$86$};
+  \node[right=2pt, font=\small] at (P2)  {$25$};
+  \node[right=2pt, font=\small] at (P3)  {$57$};
+  \node[right=2pt, font=\small] at (P4)  {$143$};
+  \node[right=2pt, font=\small] at (P5)  {$220$};
+  \node[right=2pt, font=\small] at (P6)  {$160$};
+  \node[right=2pt, font=\small] at (P7)  {$40$};
+  \node[right=2pt, font=\small] at (P8)  {$217$};
+  \node[right=2pt, font=\small] at (P9)  {$160$};
+  \node[right=2pt, font=\small] at (P10) {$121$};
+  \node[right=2pt, font=\small] at (P11) {$158$};
+  \node[below=4pt, font=\small] at (P12) {$86$};
+  \node[right=2pt, font=\small] at (P13) {$79$};
+  \node[right=2pt, font=\small] at (P14) {$37$};
+\end{tikzpicture}

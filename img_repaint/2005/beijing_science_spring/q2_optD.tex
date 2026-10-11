@@ -1,0 +1,9 @@
+\begin{tikzpicture}[>=stealth, scale=0.8, line cap=round, line join=round]
+  \draw[->] (-0.3, 0) -- (2.4, 0) node[below=1pt] {$x$};
+  \draw[->] (0, -0.3) -- (0, 2.2) node[left=1pt] {$y$};
+  \node[below left=-1pt] at (0, 0) {$O$};
+  \node[below=1pt] at (1, 0) {$1$};
+
+  \draw[very thick] plot[domain=0.25:1, samples=40] (\x, {-ln(\x)/ln(2)});
+  \draw[very thick] (1, 0) -- (2.2, 1.1);
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth, scale=1.1, line cap=round, line join=round]
+  % Axes
+  \draw[->] (-0.6,0) -- (2.8,0) node[below] {$x$};
+  \draw (0,-0.6) -- (0,2.2);
+  \node[below left=1pt] at (0,0) {$O$};
+  \node[below right=1pt] at (0,0) {$P$};
+
+  % Square PABC
+  \coordinate (A) at (1.5, 0);
+  \coordinate (B) at (1.5, 1.5);
+  \coordinate (C) at (0, 1.5);
+
+  \draw[thick] (0,0) -- (A) -- (B) -- (C) -- cycle;
+
+  % Labels
+  \node[below] at (A) {$A$};
+  \node[above right=-2pt] at (B) {$B$};
+  \node[left] at (C) {$C$};
+\end{tikzpicture}

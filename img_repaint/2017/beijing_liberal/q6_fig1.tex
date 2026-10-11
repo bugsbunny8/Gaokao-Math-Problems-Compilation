@@ -1,0 +1,54 @@
+\begin{tikzpicture}[baseline,line cap=round,line join=round,>=stealth,scale=0.7]
+  % Styles
+  \tikzset{
+    thickline/.style={line width=0.8pt},
+    dimline/.style={line width=0.45pt},
+  }
+
+  % ==================== 正 (主) 视图 ====================
+  \coordinate (F_TL) at (0,4);
+  \coordinate (F_BL) at (0,0);
+  \coordinate (F_BR) at (5,0);
+
+  \draw[thickline] (F_TL) -- (F_BL) -- (F_BR) -- cycle;
+
+  % Dimension 4
+  \draw[dimline] (-0.4,4) -- (0,4);
+  \draw[dimline] (-0.4,0) -- (0,0);
+  \draw[<->,dimline] (-0.25,0) -- (-0.25,4) node[midway,left] {$4$};
+
+  % Dimension 5
+  \draw[dimline] (0,0) -- (0,-0.4);
+  \draw[dimline] (5,0) -- (5,-0.4);
+  \draw[<->,dimline] (0,-0.25) -- (5,-0.25) node[midway,fill=white,inner sep=1pt] {$5$};
+
+  \node[below] at (2.5,-0.7) {正 (主) 视图};
+
+  % ==================== 侧 (左) 视图 ====================
+  \def\sx{7.0}
+  \coordinate (S_BL) at (\sx,0);
+  \coordinate (S_BR) at (\sx+3,0);
+  \coordinate (S_TR) at (\sx+3,4);
+
+  \draw[thickline] (S_BL) -- (S_BR) -- (S_TR) -- cycle;
+
+  % Dimension 3
+  \draw[dimline] (\sx,0) -- (\sx,-0.4);
+  \draw[dimline] (\sx+3,0) -- (\sx+3,-0.4);
+  \draw[<->,dimline] (\sx,-0.25) -- (\sx+3,-0.25) node[midway,fill=white,inner sep=1pt] {$3$};
+
+  \node[below] at (\sx+1.5,-0.7) {侧 (左) 视图};
+
+  % ==================== 俯视图 ====================
+  \def\ty{-2.0}
+  \coordinate (T_TL) at (0,\ty);
+  \coordinate (T_TR) at (5,\ty);
+  \coordinate (T_BR) at (5,\ty-3);
+  \coordinate (T_BL) at (0,\ty-3);
+
+  \draw[thickline] (T_TL) -- (T_TR) -- (T_BR) -- (T_BL) -- cycle;
+  \draw[thickline] (T_BL) -- (T_TR);
+  \draw[dashed,line width=0.6pt] (T_TL) -- (T_BR);
+
+  \node[below] at (2.5,\ty-3.3) {俯视图};
+\end{tikzpicture}

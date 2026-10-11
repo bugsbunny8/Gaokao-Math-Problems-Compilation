@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth, scale=1.1, line cap=round, line join=round]
+  % Axes
+  \draw[->] (-0.6,0) -- (4.2,0) node[below] {$x$};
+  \draw[->] (0,-0.6) -- (0,3.0) node[left] {$y$};
+  \node[below left] at (0,0) {$O$};
+
+  % Vertices
+  \coordinate (C) at (0,2.2);
+  \coordinate (B) at (1.2,0);
+  \coordinate (A) at (2.4,1.1);
+
+  % Triangle
+  \draw[thick] (C) -- (A) -- (B) -- cycle;
+
+  % Labels
+  \node[above right] at (C) {$C(0,2)$};
+  \node[right] at (A) {$A(2,1)$};
+  \node[below] at (B) {$B(1,0)$};
+\end{tikzpicture}

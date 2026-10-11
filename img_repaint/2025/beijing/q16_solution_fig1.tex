@@ -1,0 +1,18 @@
+% 2025年北京高考数学第16题解析图1：三角形与其高
+\begin{tikzpicture}[>=stealth,line width=0.6pt,font=\normalsize]
+  \coordinate (A) at (1.6,0);
+  \coordinate (B) at (4.8,0);
+  \coordinate (C) at (0,1.8);
+  \coordinate (D) at (2.2,0.975);
+
+  \draw (A) -- (B) -- (C) -- cycle;
+  \draw (A) -- (D);
+
+  % 直角标记
+  \draw ($ (D)!0.15cm!(A) $) -- ($ (D)!0.15cm!(A) + (D)!0.15cm!(C) - (D) $) -- ($ (D)!0.15cm!(C) $);
+
+  \fill (A) circle (1.2pt) node[below left] {$A$};
+  \fill (B) circle (1.2pt) node[right] {$B$};
+  \fill (C) circle (1.2pt) node[left] {$C$};
+  \fill (D) circle (1.2pt) node[above right] {$D$};
+\end{tikzpicture}

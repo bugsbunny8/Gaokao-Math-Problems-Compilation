@@ -1,0 +1,27 @@
+% 2021年北京高考数学第8题：圆锥形简易雨量器
+\begin{tikzpicture}[>=stealth,line width=0.6pt,font=\normalsize]
+  % 水体填充 (灰色)
+  \fill[gray!20] (0,0) -- (-0.75,2.25) arc[start angle=180,end angle=360,x radius=0.75,y radius=0.2] -- cycle;
+  \fill[gray!20] (0,2.25) ellipse (0.75 and 0.2);
+
+  % 雨水文字
+  \node at (0,1.3) {雨};
+  \node at (0,0.7) {水};
+
+  % 水面轮廓
+  \draw (-0.75,2.25) arc[start angle=180,end angle=360,x radius=0.75,y radius=0.2];
+  \draw[dashed] (-0.75,2.25) arc[start angle=180,end angle=0,x radius=0.75,y radius=0.2];
+
+  % 圆锥母线与开口
+  \draw (-1.5,4.5) -- (0,0) -- (1.5,4.5);
+  \draw (0,4.5) ellipse (1.5 and 0.4);
+
+  % 尺寸标注: 口径 200 mm
+  \draw[|<->|] (-1.5,5.2) -- node[fill=white,inner sep=1pt] {$200\text{ mm}$} (1.5,5.2);
+
+  % 尺寸标注: 总高 300 mm
+  \draw[|<->|] (-2.0,0) -- node[fill=white,inner sep=1pt] {$300\text{ mm}$} (-2.0,4.5);
+
+  % 尺寸标注: 水深 150 mm
+  \draw[|<->|] (1.3,0) -- node[fill=white,inner sep=1pt,right] {$150\text{ mm}$} (1.3,2.25);
+\end{tikzpicture}

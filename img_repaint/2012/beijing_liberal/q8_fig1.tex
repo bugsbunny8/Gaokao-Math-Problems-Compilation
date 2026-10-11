@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=Stealth, scale=1.0, line cap=round, line join=round]
+  % Axes
+  \draw[thick, ->] (-0.3,0) -- (6.3,0) node[below] {$n$};
+  \draw[thick, ->] (0,-0.3) -- (0,5.2) node[left] {$S_n$};
+  \node[below left=2pt] at (0,0) {$O$};
+
+  % X-ticks and labels
+  \foreach \n in {1,...,11} {
+    \draw (0.5*\n, 0) -- (0.5*\n, 0.1);
+    \node[below=3pt] at (0.5*\n, 0) {$\n$};
+  }
+
+  % Points (n*0.5, Sn)
+  \coordinate (P1)  at (0.5, 0);
+  \coordinate (P2)  at (1.0, 0);
+  \coordinate (P3)  at (1.5, 0.35);
+  \coordinate (P4)  at (2.0, 0.80);
+  \coordinate (P5)  at (2.5, 1.35);
+  \coordinate (P6)  at (3.0, 1.95);
+  \coordinate (P7)  at (3.5, 2.80);
+  \coordinate (P8)  at (4.0, 3.45);
+  \coordinate (P9)  at (4.5, 3.95);
+  \coordinate (P10) at (5.0, 4.30);
+  \coordinate (P11) at (5.5, 4.55);
+
+  \foreach \p in {P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11} {
+    \fill (\p) circle (1.4pt);
+  }
+\end{tikzpicture}

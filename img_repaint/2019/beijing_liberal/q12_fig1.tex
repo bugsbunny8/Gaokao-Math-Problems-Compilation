@@ -1,0 +1,18 @@
+\begin{tikzpicture}[baseline,line cap=round,line join=round,scale=0.45]
+  % Background grid
+  \draw[gray!60, line width=0.3pt] (0,0) grid (14,13);
+
+  % 正 (主) 视图
+  \draw[line width=0.8pt] (2,8) rectangle (6,12);
+  \draw[line width=0.8pt] (2,10) -- (6,10);
+  \node[below] at (4,7.7) {正 (主) 视图};
+
+  % 侧 (左) 视图
+  \draw[line width=0.8pt] (9,8) -- (13,8) -- (13,10) -- (11,10) -- (9,12) -- cycle;
+  \node[below] at (11,7.7) {侧 (左) 视图};
+
+  % 俯视图
+  \draw[line width=0.8pt] (2,2) rectangle (6,6);
+  \draw[line width=0.8pt] (2,4) -- (6,4);
+  \node[below] at (4,1.7) {俯视图};
+\end{tikzpicture}

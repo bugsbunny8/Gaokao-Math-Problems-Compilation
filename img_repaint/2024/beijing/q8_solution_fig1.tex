@@ -1,0 +1,39 @@
+% 2024年北京高考数学第8题解析图1：作高与中点辅助线
+\begin{tikzpicture}[>=stealth,line width=0.6pt,font=\normalsize]
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (3.2,0);
+  \coordinate (D) at (4.3,1.4);
+  \coordinate (A) at (1.1,1.4);
+  \coordinate (P) at (2.9,2.4);
+
+  \coordinate (E) at (0.55,0.7);
+  \coordinate (F) at (3.75,0.7);
+  \coordinate (O) at (2.9,0.7);
+
+  % 实线可见边
+  \draw (B) -- (C) -- (D);
+  \draw (B) -- (A);
+  \draw (P) -- (B);
+  \draw (P) -- (C);
+  \draw (P) -- (D);
+  \draw (P) -- (A);
+
+  % 侧面辅助线
+  \draw (P) -- (E);
+  \draw (P) -- (F);
+
+  % 虚线不可见底边与内部高
+  \draw[dashed] (A) -- (D);
+  \draw[dashed] (E) -- (F);
+  \draw[dashed] (P) -- (O);
+
+  % 顶点标注
+  \node[above] at (P) {$P$};
+  \node[above left] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[left] at (E) {$E$};
+  \node[below right] at (F) {$F$};
+  \node[below left] at (O) {$O$};
+\end{tikzpicture}

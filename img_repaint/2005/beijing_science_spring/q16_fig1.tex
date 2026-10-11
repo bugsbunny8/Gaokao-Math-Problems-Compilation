@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>=stealth, scale=1.1, line cap=round, line join=round]
+  % Coordinates
+  \coordinate (A) at (-3.2, 0.8);
+  \coordinate (B1) at (-1.0, 0);
+  \coordinate (B) at (0.2, -0.4);
+  \coordinate (M) at (1.1, 0.8);
+  \coordinate (C) at (2.0, 2.0);
+  \coordinate (C1) at (0.2, 1.6);
+  \coordinate (A1) at (1.1, 4.0);
+
+  % Dashed lines (unfolded position)
+  \draw[dashed] (A) -- (B1);
+  \draw[dashed] (A) -- (C1);
+
+  % Solid lines (base trapezoid and folded tetrahedron)
+  \draw (B1) -- (B) -- (C) -- (C1) -- cycle;
+  \draw (A1) -- (B1);
+  \draw (A1) -- (C1);
+  \draw (A1) -- (M);
+
+  % Labels
+  \node[above] at (A1) {$A_1$};
+  \node[left] at (A) {$A$};
+  \node[below left=-1pt] at (B1) {$B_1$};
+  \node[below] at (B) {$B$};
+  \node[below right=-1pt] at (M) {$M$};
+  \node[above right=-1pt] at (C) {$C$};
+  \node[below right=-1pt] at (C1) {$C_1$};
+  \node at (-0.2, 0.5) {$G$};
+\end{tikzpicture}

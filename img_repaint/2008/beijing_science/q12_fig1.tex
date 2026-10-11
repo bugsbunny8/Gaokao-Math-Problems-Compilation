@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=stealth, scale=0.8, line cap=round, line join=round]
+  % Grid
+  \draw[step=1, gray!50, thin] (0, 0) grid (6, 4);
+
+  % Axes
+  \draw[->] (-0.5, 0) -- (6.8, 0) node[below=1pt] {$x$};
+  \draw[->] (0, -0.5) -- (0, 4.8) node[left=1pt] {$y$};
+
+  % Origin
+  \node[below left=-1pt] at (0, 0) {$O$};
+
+  % Tick labels
+  \foreach \x in {1, 2, 3, 4, 5, 6} {
+    \node[below=1pt] at (\x, 0) {$\x$};
+  }
+  \foreach \y in {1, 2, 3, 4} {
+    \node[left=1pt] at (0, \y) {$\y$};
+  }
+
+  % Broken line ABC
+  \draw[very thick] (0, 4) -- (2, 0) -- (6, 4);
+
+  % Point labels
+  \node[above right=-1pt] at (0, 4) {$A$};
+  \node[above=3pt] at (2, 0) {$B$};
+  \node[right] at (6, 4) {$C$};
+\end{tikzpicture}

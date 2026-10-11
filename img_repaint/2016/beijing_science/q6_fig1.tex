@@ -1,0 +1,55 @@
+\begin{tikzpicture}[baseline,line cap=round,line join=round,>=stealth,scale=1.3]
+  % Styles
+  \tikzset{
+    thickline/.style={line width=0.8pt},
+    dimline/.style={line width=0.45pt},
+  }
+
+  % ==================== 正 (主) 视图 ====================
+  \coordinate (F_P) at (0,1);
+  \coordinate (F_M) at (1,0);
+  \coordinate (F_R) at (2,0);
+
+  \draw[thickline] (F_P) -- (F_M) -- (F_R) -- cycle;
+  \node[below] at (1,-0.35) {正 (主) 视图};
+
+  % ==================== 侧 (左) 视图 ====================
+  \def\sx{3.0}
+  \coordinate (S_TL) at (\sx,1);
+  \coordinate (S_BL) at (\sx,0);
+  \coordinate (S_BR) at (\sx+1,0);
+
+  \draw[thickline] (S_TL) -- (S_BL) -- (S_BR) -- cycle;
+
+  % Dimensions for 侧视图
+  % Height 1 on left
+  \draw[dimline] (\sx,1) -- (\sx-0.25,1);
+  \draw[dimline] (\sx,0) -- (\sx-0.25,0);
+  \draw[<->,dimline] (\sx-0.15,0) -- (\sx-0.15,1) node[midway,left] {$1$};
+
+  % Base 1
+  \draw[dimline] (\sx,0) -- (\sx,-0.25);
+  \draw[dimline] (\sx+1,0) -- (\sx+1,-0.25);
+  \draw[<->,dimline] (\sx,-0.15) -- (\sx+1,-0.15) node[midway,fill=white,inner sep=0.5pt] {$1$};
+
+  \node[below] at (\sx+0.5,-0.35) {侧 (左) 视图};
+
+  % ==================== 俯视图 ====================
+  \def\ty{-1.0}
+  \coordinate (T_TL) at (0,\ty);
+  \coordinate (T_M)  at (1,\ty);
+  \coordinate (T_TR) at (2,\ty);
+  \coordinate (T_BR) at (2,\ty-1);
+
+  % Dimensions on top of 俯视图
+  \draw[dimline] (0,\ty) -- (0,\ty+0.25);
+  \draw[dimline] (1,\ty) -- (1,\ty+0.25);
+  \draw[dimline] (2,\ty) -- (2,\ty+0.25);
+  \draw[<->,dimline] (0,\ty+0.15) -- (1,\ty+0.15) node[midway,fill=white,inner sep=0.5pt] {$1$};
+  \draw[<->,dimline] (1,\ty+0.15) -- (2,\ty+0.15) node[midway,fill=white,inner sep=0.5pt] {$1$};
+
+  \draw[thickline] (T_TL) -- (T_TR) -- (T_BR) -- cycle;
+  \draw[dashed,line width=0.6pt] (T_M) -- (T_BR);
+
+  \node[below] at (1,\ty-1.2) {俯视图};
+\end{tikzpicture}

@@ -1,0 +1,27 @@
+% 2020年北京高考数学第15题：企业污水治理关系图
+\begin{tikzpicture}[>=stealth,line width=0.6pt,font=\normalsize]
+  % 坐标轴
+  \draw[->] (0,0) -- (11.5,0) node[below] {$t$};
+  \draw[->] (0,0) -- (0,4.0) node[left] {$W$};
+  \node[below left] at (0,0) {$O$};
+
+  % 关键时间刻度与基准线
+  \draw[dashed] (0,1.0) node[left] {污水达标排放量} -- (10.5,1.0);
+  \draw[dashed] (3.0,0) node[below] {$t_1$} -- (3.0,3.0);
+  \draw[dashed] (7.0,0) node[below] {$t_2$} -- (7.0,1.6);
+  \draw[dashed] (10.5,0) node[below] {$t_3$} -- (10.5,1.0);
+
+  % 甲企业曲线
+  \draw plot[smooth,tension=0.7] coordinates {
+    (0,3.2) (1.2,3.3) (3.0,3.0) (5.0,2.45) (7.0,1.6) (8.5,1.05) (10.5,0.68) (11.0,0.63)
+  };
+  \node[above] at (1.2,3.3) {甲企业};
+  \node[below] at (9.2,0.85) {甲企业};
+
+  % 乙企业曲线
+  \draw plot[smooth,tension=0.7] coordinates {
+    (0,2.4) (3.0,2.2) (5.0,1.92) (7.0,1.6) (9.0,1.25) (10.5,0.98) (11.0,0.92)
+  };
+  \node[above] at (1.2,2.4) {乙企业};
+  \node[above] at (9.2,1.3) {乙企业};
+\end{tikzpicture}

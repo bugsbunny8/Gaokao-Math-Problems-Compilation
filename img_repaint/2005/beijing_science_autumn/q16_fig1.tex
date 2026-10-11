@@ -1,0 +1,42 @@
+\begin{tikzpicture}[>=stealth, scale=1.0, line cap=round, line join=round]
+  % Vertices
+  \coordinate (A) at (0, 0);
+  \coordinate (B) at (2.0, -0.6);
+  \coordinate (C) at (5.8, 1.2);
+  \coordinate (D) at (0.9, 1.2);
+
+  \coordinate (A1) at (0, 2.4);
+  \coordinate (B1) at (2.0, 1.8);
+  \coordinate (C1) at (5.8, 3.6);
+  \coordinate (D1) at (0.9, 3.6);
+
+  \coordinate (E) at (1.46, 0.3);
+
+  % Dashed lines
+  \draw[dashed] (D) -- (D1);
+  \draw[dashed] (D) -- (A);
+  \draw[dashed] (D) -- (C);
+  \draw[dashed] (A) -- (C);
+  \draw[dashed] (B) -- (D);
+  \draw[dashed] (A1) -- (E);
+  \draw[dashed] (E) -- (C1);
+  \draw[dashed] (A1) -- (C);
+
+  % Solid lines
+  \draw (A) -- (B) -- (C);
+  \draw (A) -- (A1) -- (B1) -- (B);
+  \draw (B1) -- (C1) -- (C);
+  \draw (A1) -- (D1) -- (C1);
+  \draw (A1) -- (B) -- (C1);
+
+  % Labels
+  \node[below left=-1pt] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[left] at (A1) {$A_1$};
+  \node[above] at (B1) {$B_1$};
+  \node[above right=-1pt] at (C1) {$C_1$};
+  \node[above left=-1pt] at (D1) {$D_1$};
+  \node[above right=-2pt] at (E) {$E$};
+\end{tikzpicture}

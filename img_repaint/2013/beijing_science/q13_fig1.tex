@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth, scale=0.65, line cap=round, line join=round]
+  % Grid
+  \draw[gray!60, line width=0.4pt] (0,0) grid (8,5);
+  \draw[gray!80, semithick] (0,0) rectangle (8,5);
+
+  % Vectors
+  \draw[thick, ->] (2,1) -- (1,2);
+  \node[below left=-1pt, font=\normalsize] at (1.4,1.4) {$\bs{a}$};
+
+  \draw[thick, ->] (1,2) -- (7,4);
+  \node[above=2pt, font=\normalsize] at (3.6,3.0) {$\bs{b}$};
+
+  \draw[thick, ->] (7,4) -- (6,1);
+  \node[right=2pt, font=\normalsize] at (6.6,2.5) {$\bs{c}$};
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[>=Stealth, scale=1.1, line cap=round, line join=round]
+  % Axes
+  \draw[->] (-1.8,0) -- (3.2,0) node[below] {$x$};
+  \draw[->] (0,-0.6) -- (0,3.0) node[left] {$y$};
+  \node[below left] at (0,0) {$O$};
+
+  % Coordinates
+  \coordinate (A) at (-1.2,0);
+  \coordinate (C) at (0,2.4);
+  \coordinate (B) at (2.4,0);
+
+  % Broken line
+  \draw[thick] (A) -- (C) -- (B);
+
+  % Ticks & Labels
+  \node[above left] at (A) {$A$};
+  \node[below] at (A) {$-1$};
+
+  \node[above right] at (C) {$C$};
+  \node[left] at (0,2.4) {$2$};
+
+  \node[above right] at (B) {$B$};
+  \node[below] at (B) {$2$};
+\end{tikzpicture}
